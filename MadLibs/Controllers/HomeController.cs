@@ -5,24 +5,10 @@ namespace MadLib.Controllers
 {
   public class HomeController : Controller
   {
-
     [Route("/")]
-    public ActionResult Adventure()
-    {
-      AdventureVariable myAdventureVariable = new AdventureVariable();
-      myAdventureVariable.Noun = "North Shore Ridge";
-      myAdventureVariable.NounA = "Black Mountain";
-      myAdventureVariable.Adjective = "Fluthy";
-      myAdventureVariable.AdjectiveA = "folopial";
-      myAdventureVariable.Location = "Holy Mammoth Rock";
-      return View(myAdventureVariable);
-    }
-
-    [Route("/form")]
     public ActionResult Form() { return View(); }
-
     [Route("/adventure")]
-    public ActionResult Adventure(string noun, string nounA, string adjective, string adjectiveA, string location)
+    public ActionResult Adventure(string noun, string nounA, string adjective, string adjectiveA, string location, string adverb)
     {
       AdventureVariable myAdventureVariable = new AdventureVariable();
       myAdventureVariable.Noun = noun;
@@ -30,7 +16,24 @@ namespace MadLib.Controllers
       myAdventureVariable.Adjective = adjective;
       myAdventureVariable.AdjectiveA = adjectiveA;
       myAdventureVariable.Location = location;
+      myAdventureVariable.Adverb = adverb;
       return View(myAdventureVariable);
+    }
+    [Route("/alternate-form")]
+    public ActionResult AlternateForm() { return View(); }
+    [Route("/alternate")]
+    public ActionResult Alternate(string verb, string thing, string place, string noun, string placeA, string ingVerb, string edVerb, string verbA)
+    {
+      AlternateVariable myAlternateVariable = new AlternateVariable();
+      myAlternateVariable.Verb = verb;
+      myAlternateVariable.Thing = thing;
+      myAlternateVariable.Place = place;
+      myAlternateVariable.Noun = noun;
+      myAlternateVariable.PlaceA = placeA;
+      myAlternateVariable.IngVerb = ingVerb;
+      myAlternateVariable.EdVerb = edVerb;
+      myAlternateVariable.VerbA = verbA;
+      return View(myAlternateVariable);
     }
   }
 }

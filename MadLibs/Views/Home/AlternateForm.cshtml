@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>MadLib</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body style="color: linear-gradient(green, red);">
+    <div class="container" style="Background: linear-gradient(sky-blue, teal, blue)">
+      <h1>Fill in the mad lib!</h1>
+      <form action="/alternate" method="post">
+        <div class="form-group">
+          <label for="verb">Verb present tense: </label>
+          <input id="verb" name="verb" type="text">
+          <label for="thing">Thing: </label>
+          <input id="thing" name="thing" type="text">
+          <label for="place">Place: </label>
+          <input id="place" name="place" type="text">
+          <label for="noun">noun: </label>
+          <input id="noun" name="noun" type="text">
+        </div>
+        <div class="form-group">
+          <label for="palceA">Place: </label>
+          <input id="palceA" name="placeA" type="text">
+          <label for="ing-verb">Verb ending in -ing: </label>
+          <input id="ing-verb" name="ing-verb" type="text">
+          <label for="ed-verb">Verb past tense: </label>
+          <input id="ed-verb" name="ed-verb" type="text">
+          <label for="verbA">Verb present tense: </label>
+          <input id="verbA" name="verbA" type="text">
+        </div>
+        <button type="submit">Go!</button>
+      </form>
+    </div>
+  </body>
+</html>

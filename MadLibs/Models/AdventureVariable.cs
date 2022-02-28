@@ -7,5 +7,6 @@ namespace MadLib.Models
     public string Adjective { get; set; }
     public string AdjectiveA { get; set; }
     public string Location { get; set; }
+    public string Adverb { get; set; }
   }
 }
